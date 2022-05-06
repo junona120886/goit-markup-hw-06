@@ -34,6 +34,7 @@ Roboto, normal, 400, 500, 700, 900;
   --icon-footer-bg-color: rgba(255, 255, 255, 0.1);
   --icon-goals-bg-color: #f5f4fa;
   --clients-border-color: #afb1b8;
+  --primary-form-icon-color: #212121;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -711,6 +712,11 @@ img {
 
   margin-bottom: 0.315rem;
 }
+.form-input-thmb {
+  position: relative;
+
+  margin-bottom: 0.625rem;
+}
 .form-input {
   width: 100%;
   height: 2.5rem;
@@ -720,8 +726,19 @@ img {
 
   color: var(--primary-text-color);
 
-  padding: 0 0.875rem;
-  margin-bottom: 0.625rem;
+  padding: 0 0.875rem 0 2.62rem;
+}
+.form-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+
+  width: 1.125rem;
+  height: 1.125rem;
+
+  fill: var(--primary-form-icon-color);
 }
 .comment {
   height: 7.5rem;
@@ -729,6 +746,7 @@ img {
   resize: none;
 
   text-align: left;
+  margin-bottom: 1.25rem;
 }
 .comment::placeholder {
   font-size: 0.875rem;
@@ -745,7 +763,10 @@ img {
 }
 .form-checkbox {
   margin-right: 0.625rem;
-  outline: transparent;
+}
+
+.form-checkbox:focus {
+  outline: 0.02rem solid;
 }
 .term-lable {
   font-size: 0.875rem;
@@ -753,12 +774,18 @@ img {
 }
 .terms-link {
   color: var(--accent-color);
-  outline: transparent;
 }
-.form-input:hover,
+
+.terms-link:focus {
+  outline: 1px solid;
+}
+
 .form-input:focus {
   border-color: var(--accent-color);
-  outline: transparent;
+  outline: 1px solid var(--accent-color);
+}
+.form-input:focus + .form-icon {
+  fill: var(--accent-color);
 }
 /*portfolio.html*/
 .portfolio {

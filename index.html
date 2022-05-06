@@ -584,12 +584,33 @@
           class="form"
         >
           <label for="username" class="form-lable">Имя</label>
-          <input type="text" id="username" class="form-input" name="username" />
+          <div class="form-input-thmb">
+            <input
+              type="text"
+              id="username"
+              class="form-input"
+              name="username"
+            />
+
+            <svg class="form-icon">
+              <use href="./images/icons/symbol-defs.svg#user"></use>
+            </svg>
+          </div>
           <label for="phone" class="form-lable">Телефон</label>
-          <input type="tel" id="phone" class="form-input" name="phone" />
+          <div class="form-input-thmb">
+            <input type="tel" id="phone" class="form-input" name="phone" />
+            <svg class="form-icon">
+              <use href="./images/icons/symbol-defs.svg#phone"></use>
+            </svg>
+          </div>
           <label for="email" class="form-lable">Почта</label>
-          <input type="email" id="email" class="form-input" name="email" />
-          <label for="comment" class="form-lable">Комментарий</label>
+          <div class="form-input-thmb">
+            <input class="form-input" type="email" id="email" name="email" />
+            <svg class="form-icon">
+              <use href="./images/icons/symbol-defs.svg#envelope"></use>
+            </svg>
+          </div>
+          <label class="form-lable" for="comment">Комментарий</label>
           <textarea
             id="comment"
             class="form-input comment"
