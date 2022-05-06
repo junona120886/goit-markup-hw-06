@@ -784,7 +784,13 @@ img {
   border-color: var(--accent-color);
   outline: 1px solid var(--accent-color);
 }
-.form-input:focus + .form-icon {
+/*first variant to change icon color*/
+/*.form-input:focus + .form-icon {
+  fill: var(--accent-color);
+}*/
+
+/*second variant to change icon color*/
+.form-input-thmb:focus-within .form-icon {
   fill: var(--accent-color);
 }
 /*portfolio.html*/
