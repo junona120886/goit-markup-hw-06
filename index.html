@@ -584,19 +584,28 @@
           class="form"
         >
           <label for="username" class="form-lable">Имя</label>
-          <input type="text" id="username" class="form-input" />
+          <input type="text" id="username" class="form-input" name="username" />
           <label for="phone" class="form-lable">Телефон</label>
-          <input type="tel" id="phone" class="form-input" />
+          <input type="tel" id="phone" class="form-input" name="phone" />
           <label for="email" class="form-lable">Почта</label>
-          <input type="email" id="email" class="form-input" />
-          <label for="ecomment" class="form-lable">Комментарий</label>
-          <input type="textarea" id="comment" class="form-input comment" />
-          <input type="checkbox" id="terms" class="form-input" />
-          <label for="terms" class="form-lable"
-            >Соглашаюсь с рассылкой и принимаю
-            <a href="" class="terms-link">Условия договора</a></label
-          >
-          <button type="submit" class="button-primary">Отправить</button>
+          <input type="email" id="email" class="form-input" name="email" />
+          <label for="comment" class="form-lable">Комментарий</label>
+          <textarea
+            id="comment"
+            class="form-input comment"
+            name="comment"
+            placeholder="Введите текст"
+          ></textarea>
+          <div class="form-section term-section">
+            <input type="checkbox" id="terms" class="form-checkbox" />
+            <label for="terms" class="form-lable term-lable"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="" class="terms-link">Условия договора</a></label
+            >
+          </div>
+          <button type="submit" class="button-base button-order">
+            Отправить
+          </button>
         </form>
       </div>
     </div>

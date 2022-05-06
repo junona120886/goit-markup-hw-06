@@ -328,6 +328,8 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -716,11 +718,42 @@ img {
   border-radius: 0.25rem;
   border: 0.062rem solid rgba(33, 33, 33, 0.2);
 
-  padding: 0.875rem;
+  color: var(--primary-text-color);
+
+  padding: 0 0.875rem;
   margin-bottom: 0.625rem;
 }
 .comment {
-  min-height: 7.5rem;
+  height: 7.5rem;
+  padding: 1rem;
+  resize: none;
+
+  text-align: left;
+}
+.comment::placeholder {
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.term-section {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  margin-bottom: 1.875rem;
+}
+.form-checkbox {
+  margin-right: 0.625rem;
+  outline: transparent;
+}
+.term-lable {
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+}
+.terms-link {
+  color: var(--accent-color);
+  outline: transparent;
 }
 .form-input:hover,
 .form-input:focus {
