@@ -495,6 +495,7 @@
         </div>
       </section>
     </main>
+    <!--footer-->
     <footer class="footer">
       <div class="main-container">
         <div class="footer-content flex-container">
@@ -564,6 +565,7 @@
               </li>
             </ul>
           </div>
+          <!--footer mailing form-->
           <div class="footer-mailing">
             <p class="footer-mailing-text">Подпишитесь на рассылку</p>
             <form
@@ -597,19 +599,17 @@
                 class="button-base button-order mailing-button"
               >
                 <span class="mailing-button-text">Подписаться</span>
-                <div class="mailing-icon-thmb">
-                  <svg class="mailing-button-icon">
-                    <use href="./images/icons/symbol-defs.svg#send"></use>
-                  </svg>
-                </div>
+                <svg class="mailing-button-icon">
+                  <use href="./images/icons/symbol-defs.svg#send"></use>
+                </svg>
               </button>
             </form>
           </div>
         </div>
       </div>
     </footer>
+    <!--modal-->
     <div class="back-drop is-hidden" data-modal>
-      <!--  <div class="back-drop" data-modal> -->
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg class="modal-close-icon">
@@ -617,6 +617,7 @@
           </svg>
         </button>
         <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <!--modal form-->
         <form
           action="#"
           autocomplete="off"
@@ -659,10 +660,13 @@
             placeholder="Введите текст"
           ></textarea>
           <div class="form-section term-section">
-            <input type="checkbox" id="terms" class="form-checkbox" />
-            <label for="terms" class="form-lable term-lable"
-              >Соглашаюсь с рассылкой и принимаю
-              <a href="" class="terms-link">Условия договора</a></label
+            <label for="terms" class="form-lable term-lable">
+              <input class="form-checkbox" type="checkbox" id="terms" />
+              <span class="custom-checkbox"></span>
+              <span class="lable-text">
+                Соглашаюсь с рассылкой и принимаю
+                <a href="" class="terms-link">Условия договора</a>
+              </span></label
             >
           </div>
           <button type="submit" class="button-base button-order">

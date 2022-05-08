@@ -552,13 +552,13 @@ img {
   align-items: baseline;
   justify-content: left;
 
-  outline: 1px solid red;
+  /* outline: 1px solid red;*/
 }
 .footer-adress {
   margin-right: 70px;
   justify-content: left;
 
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 .footer-logo {
   display: block;
@@ -571,7 +571,7 @@ img {
   text-decoration: none;
 
   margin-bottom: 20px;
-  outline: 1px solid red;
+  /*  outline: 1px solid red;*/
 }
 .adress-text {
   color: var(--footer-text-color);
@@ -598,7 +598,7 @@ img {
 .footer-social {
   justify-content: left;
 
-  outline: 1px solid red;
+  /* outline: 1px solid red;*/
 }
 .footer-social-text {
   display: block;
@@ -634,7 +634,7 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
-  outline: none;
+  outline: 1px solid;
 }
 .footer-social-item {
   max-height: 44px;
@@ -647,7 +647,7 @@ img {
   margin-left: auto;
   justify-content: left;
 
-  outline: 1px solid red;
+  /* outline: 1px solid red;*/
 }
 .footer-mailing-text {
   display: block;
@@ -681,7 +681,16 @@ img {
 
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.mailing-input:focus {
+  border-color: var(--accent-color);
+  outline: 1px solid var(--accent-color);
+}
+
 /*.mailing-button-thmb {
   position: relative;
 }
@@ -707,6 +716,7 @@ img {
 }
 .mailing-button-icon {
   display: block;
+
   width: 1.5rem;
   height: 1.5rem;
 
@@ -760,13 +770,24 @@ img {
   background-color: #fff;
   cursor: pointer;
 }
-.modal:hover {
-  background-color: #fff;
-}
 .modal-close-icon {
   width: 11px;
   height: 11px;
+
+  fill: #000;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close:hover > .modal-close-icon,
+.modal-close:focus > .modal-close-icon {
+  fill: var(--accent-color);
+}
+.modal:hover {
+  background-color: #fff;
+}
+
 .modal-title {
   font-size: 1.25rem;
   letter-spacing: 00.03em;
@@ -796,9 +817,17 @@ img {
   border-radius: 0.25rem;
   border: 0.062rem solid rgba(33, 33, 33, 0.2);
 
+  padding: 0 0.875rem 0 2.62rem;
+
   color: var(--primary-text-color);
 
-  padding: 0 0.875rem 0 2.62rem;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus {
+  border-color: var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 .form-icon {
   position: absolute;
@@ -811,6 +840,13 @@ img {
   height: 1.125rem;
 
   fill: var(--primary-form-icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input-thmb:focus-within .form-icon {
+  fill: var(--accent-color);
 }
 .comment {
   height: 7.5rem;
@@ -833,16 +869,47 @@ img {
 
   margin-bottom: 1.875rem;
 }
-.form-checkbox {
+/*.form-checkbox-thmb {
+  position: relative;
   margin-right: 0.625rem;
+}*/
+.form-checkbox {
+  visibility: hidden;
 }
+.custom-checkbox {
+  display: inline-block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
 
-.form-checkbox:focus {
-  outline: 0.02rem solid;
+  width: 1rem;
+  height: 1rem;
+
+  border-radius: 0.125rem;
+  border: 0.125rem solid var(--primary-form-icon-color);
+}
+.form-checkbox:checked + .custom-checkbox {
+  border: transparent;
+  background-color: var(--accent-color);
+  background-image: url("../images/icons/checkbox-full.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;
 }
 .term-lable {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
   font-size: 0.875rem;
   letter-spacing: 0.03em;
+}
+.lable-text {
+  margin-left: 0.625rem;
 }
 .terms-link {
   color: var(--accent-color);
@@ -851,20 +918,13 @@ img {
 .terms-link:focus {
   outline: 1px solid;
 }
-
-.form-input:focus {
-  border-color: var(--accent-color);
-  outline: 1px solid var(--accent-color);
-}
 /*first variant to change icon color*/
 /*.form-input:focus + .form-icon {
   fill: var(--accent-color);
 }*/
 
 /*second variant to change icon color*/
-.form-input-thmb:focus-within .form-icon {
-  fill: var(--accent-color);
-}
+
 /*portfolio.html*/
 .portfolio {
   padding-top: 95px;
