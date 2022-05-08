@@ -564,6 +564,47 @@
               </li>
             </ul>
           </div>
+          <div class="footer-mailing">
+            <p class="footer-mailing-text">Подпишитесь на рассылку</p>
+            <form
+              class="mailing-form"
+              action="#"
+              autocomplete="off"
+              novalidate
+              name="mailing-form"
+            >
+              <label class="mailing-lable" for="mailing-email"></label>
+              <input
+                class="mailing-input"
+                type="email"
+                id="mailing-email"
+                name="mailing-email"
+                placeholder="E-mail"
+              />
+              <!--try to place button icon via positiob avsolute-->
+              <!-- <div class="mailing-button-thmb">
+                <button type="submit" class="button-base button-order">
+                  Подписаться
+                </button>
+                <div class="mailing-icon-thmb">
+                  <svg class="mailing-button-icon">
+                    <use href="./images/icons/symbol-defs.svg#send"></use>
+                  </svg>
+                </div>
+              </div>-->
+              <button
+                type="submit"
+                class="button-base button-order mailing-button"
+              >
+                <span class="mailing-button-text">Подписаться</span>
+                <div class="mailing-icon-thmb">
+                  <svg class="mailing-button-icon">
+                    <use href="./images/icons/symbol-defs.svg#send"></use>
+                  </svg>
+                </div>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
